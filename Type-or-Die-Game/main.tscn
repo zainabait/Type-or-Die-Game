@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c68pwmu4j3kit"]
+[gd_scene load_steps=9 format=3 uid="uid://c68pwmu4j3kit"]
 
 [ext_resource type="Texture2D" uid="uid://v876s35sy7rr" path="res://bg.jpg" id="1_flvkc"]
 [ext_resource type="Texture2D" uid="uid://67svnecd31lj" path="res://8-bits-farm-gaming-assets_23-2151143702-fotor-bg-remover-20240731171819.png" id="2_22sg6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b6sh70bnxv2ak" path="res://8-bits-farm-gaming-assets_23-2151143702-fotor-bg-remover-20240731172643.png" id="5_nodjy"]
 [ext_resource type="Texture2D" uid="uid://bvnmc7e7x20ea" path="res://house-fotor-bg-remover-2024073117222.png" id="6_v8y85"]
 [ext_resource type="Texture2D" uid="uid://cuj6nrdk06p3q" path="res://haj-fotor-bg-remover-20240731174747.png" id="7_tlt83"]
+[ext_resource type="Script" path="res://enemy.gd" id="8_kw4vj"]
 
 [node name="Node" type="Node"]
 
@@ -21,86 +22,87 @@ size_flags_vertical = 4
 texture = ExtResource("1_flvkc")
 expand_mode = 1
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Node2D2" type="Node2D" parent="."]
+script = ExtResource("8_kw4vj")
 
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171819" type="Sprite2D" parent="Node2D"]
-position = Vector2(786, 533)
-scale = Vector2(0.4355, 0.416575)
-texture = ExtResource("2_22sg6")
+[node name="Haj-fotor-bg-remover-20240731174747" type="Sprite2D" parent="Node2D2"]
+position = Vector2(897, -72)
+scale = Vector2(0.2765, 0.27261)
+texture = ExtResource("7_tlt83")
 
-[node name="8-bits-farm-gaming-assets23-21511437022-fotor-bg-remover-20240731171031" type="Sprite2D" parent="Node2D"]
-position = Vector2(416, 494)
-scale = Vector2(0.493534, 0.502004)
-texture = ExtResource("3_fgevt")
+[node name="Area2D" type="Node2D" parent="."]
 
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171053" type="Sprite2D" parent="Node2D"]
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171053" type="Sprite2D" parent="Area2D"]
 position = Vector2(304, 528)
 scale = Vector2(0.348552, 0.358)
 texture = ExtResource("4_7a762")
 
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171055" type="Sprite2D" parent="Node2D"]
-position = Vector2(1057, 415)
-scale = Vector2(0.103703, 0.09625)
-texture = ExtResource("4_7a762")
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171819" type="Sprite2D" parent="Area2D"]
+position = Vector2(786, 533)
+scale = Vector2(0.4355, 0.416575)
+texture = ExtResource("2_22sg6")
 
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171054" type="Sprite2D" parent="Node2D"]
-position = Vector2(1116, 451)
-scale = Vector2(0.187639, 0.185)
-texture = ExtResource("4_7a762")
-
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172643" type="Sprite2D" parent="Node2D"]
-position = Vector2(983, 534)
-scale = Vector2(0.259124, 0.279559)
-texture = ExtResource("5_nodjy")
-
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172647" type="Sprite2D" parent="Node2D"]
-position = Vector2(951, 536)
-scale = Vector2(0.259124, 0.279559)
-texture = ExtResource("5_nodjy")
-
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172646" type="Sprite2D" parent="Node2D"]
-position = Vector2(1015, 536)
-scale = Vector2(0.259124, 0.279559)
-texture = ExtResource("5_nodjy")
-
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172645" type="Sprite2D" parent="Node2D"]
-position = Vector2(1062, 535)
-scale = Vector2(0.259124, 0.279559)
-texture = ExtResource("5_nodjy")
-
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172648" type="Sprite2D" parent="Node2D"]
-position = Vector2(1100, 534)
-scale = Vector2(0.259124, 0.279559)
-texture = ExtResource("5_nodjy")
-
-[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172644" type="Sprite2D" parent="Node2D"]
-position = Vector2(593, 519)
-scale = Vector2(0.259124, 0.279559)
-texture = ExtResource("5_nodjy")
-
-[node name="House-fotor-bg-remover-2024073117222" type="Sprite2D" parent="Node2D"]
-position = Vector2(553, 508)
-scale = Vector2(0.414223, 0.455)
-texture = ExtResource("6_v8y85")
-
-[node name="House-fotor-bg-remover-2024073117223" type="Sprite2D" parent="Node2D"]
-position = Vector2(650, 507)
-scale = Vector2(0.414223, 0.455)
-texture = ExtResource("6_v8y85")
-
-[node name="House-fotor-bg-remover-2024073117224" type="Sprite2D" parent="Node2D"]
-position = Vector2(204.953, 561.938)
-scale = Vector2(0.210869, 0.19575)
-texture = ExtResource("6_v8y85")
-
-[node name="House-fotor-bg-remover-2024073117225" type="Sprite2D" parent="Node2D"]
+[node name="House-fotor-bg-remover-2024073117225" type="Sprite2D" parent="Area2D"]
 position = Vector2(142.977, 540.219)
 scale = Vector2(0.357634, 0.296875)
 texture = ExtResource("6_v8y85")
 
-[node name="Node2D2" type="Node2D" parent="."]
+[node name="House-fotor-bg-remover-2024073117224" type="Sprite2D" parent="Area2D"]
+position = Vector2(204.953, 561.938)
+scale = Vector2(0.210869, 0.19575)
+texture = ExtResource("6_v8y85")
 
-[node name="Haj-fotor-bg-remover-20240731174747" type="Sprite2D" parent="Node2D2"]
-position = Vector2(646, 213)
-scale = Vector2(0.241, 0.229974)
-texture = ExtResource("7_tlt83")
+[node name="House-fotor-bg-remover-2024073117223" type="Sprite2D" parent="Area2D"]
+position = Vector2(650, 507)
+scale = Vector2(0.414223, 0.455)
+texture = ExtResource("6_v8y85")
+
+[node name="House-fotor-bg-remover-2024073117222" type="Sprite2D" parent="Area2D"]
+position = Vector2(553, 508)
+scale = Vector2(0.414223, 0.455)
+texture = ExtResource("6_v8y85")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172644" type="Sprite2D" parent="Area2D"]
+position = Vector2(593, 519)
+scale = Vector2(0.259124, 0.279559)
+texture = ExtResource("5_nodjy")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172648" type="Sprite2D" parent="Area2D"]
+position = Vector2(1100, 534)
+scale = Vector2(0.259124, 0.279559)
+texture = ExtResource("5_nodjy")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172645" type="Sprite2D" parent="Area2D"]
+position = Vector2(1062, 535)
+scale = Vector2(0.259124, 0.279559)
+texture = ExtResource("5_nodjy")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172646" type="Sprite2D" parent="Area2D"]
+position = Vector2(1015, 536)
+scale = Vector2(0.259124, 0.279559)
+texture = ExtResource("5_nodjy")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172647" type="Sprite2D" parent="Area2D"]
+position = Vector2(951, 536)
+scale = Vector2(0.259124, 0.279559)
+texture = ExtResource("5_nodjy")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731172643" type="Sprite2D" parent="Area2D"]
+position = Vector2(983, 534)
+scale = Vector2(0.259124, 0.279559)
+texture = ExtResource("5_nodjy")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171054" type="Sprite2D" parent="Area2D"]
+position = Vector2(1116, 451)
+scale = Vector2(0.187639, 0.185)
+texture = ExtResource("4_7a762")
+
+[node name="8-bits-farm-gaming-assets23-2151143702-fotor-bg-remover-20240731171055" type="Sprite2D" parent="Area2D"]
+position = Vector2(1057, 415)
+scale = Vector2(0.103703, 0.09625)
+texture = ExtResource("4_7a762")
+
+[node name="8-bits-farm-gaming-assets23-21511437022-fotor-bg-remover-20240731171031" type="Sprite2D" parent="Area2D"]
+position = Vector2(416, 494)
+scale = Vector2(0.493534, 0.502004)
+texture = ExtResource("3_fgevt")
