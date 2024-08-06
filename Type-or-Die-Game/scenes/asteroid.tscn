@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs7fq0vvb1ex4"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_1ajwp"]
+[ext_resource type="Texture2D" uid="uid://cuj6nrdk06p3q" path="res://haj-fotor-bg-remover-20240731174747.png" id="2_p7qh5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5irxt"]
+radius = 47.007
+height = 146.851
+
+[node name="Node2D2" type="CharacterBody2D"]
+script = ExtResource("1_1ajwp")
+
+[node name="Haj-fotor-bg-remover-20240731174747" type="Sprite2D" parent="."]
+position = Vector2(903, -131)
+scale = Vector2(0.2765, 0.27261)
+texture = ExtResource("2_p7qh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(906, -135)
+rotation = 1.0472
+shape = SubResource("CapsuleShape2D_5irxt")

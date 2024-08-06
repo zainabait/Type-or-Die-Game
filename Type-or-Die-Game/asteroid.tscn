@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf2ld3be053x2"]
+
+[ext_resource type="Texture2D" uid="uid://cuj6nrdk06p3q" path="res://haj-fotor-bg-remover-20240731174747.png" id="1_ckfua"]
+[ext_resource type="Script" path="res://asteroid.gd" id="1_o23t0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0dux3"]
+radius = 79.7558
+height = 235.741
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_o23t0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.447, 0.441215)
+texture = ExtResource("1_ckfua")
+
+[node name="Label" type="Label" parent="."]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+top_level = true
+offset_left = 265.0
+offset_top = 3.0
+offset_right = 1016.0
+offset_bottom = 339.0
+text = "hamza"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7)
+rotation = 1.0472
+shape = SubResource("CapsuleShape2D_0dux3")
